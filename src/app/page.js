@@ -48,19 +48,19 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-2 ">
               <div className="innerbox mb-4">
                 <img src="https://images.pexels.com/photos/6831608/pexels-photo-6831608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
-                <p className="text-center">For him</p>
+                <p className="text-center bg-transparent">For him</p>
               </div>
               <div className="innerbox mb-4">
                 <img src="https://images.pexels.com/photos/17243615/pexels-photo-17243615/free-photo-of-a-woman-in-a-pink-skirt-and-white-top-is-posing-on-a-railing.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
-                <p className="text-center">For her</p>
+                <p className="text-center bg-transparent ">For her</p>
               </div>
               <div className="innerbox mb-4">
                 <img src="https://images.pexels.com/photos/13020508/pexels-photo-13020508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
-                <p className="text-center">Jewelries</p>
+                <p className="text-center bg-transparent">Jewelries</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://placehold.co/100x100" alt="/" className="w-full" />
-                <p className="text-center">Sneakers</p>
+                <img src="https://www.berluti.com/dw/image/v2/BBMR_PRD/on/demandware.static/-/Sites-masterCatalog_Berluti/default/dw1cf8f89a/images/S6011-016_shadow-knit-and-calf-leather-sneaker_gradiant-rust_berluti_01.jpg?sw=320" alt="/" className="w-full" />
+                <p className="text-center bg-transparent">Sneakers</p>
               </div>
             </div>
             <a href="#" className="text-blue-500 mt-2 block text-center">Shop all gifts</a>

@@ -5,26 +5,9 @@ import ProfileSideBar from "@/app/components/profilesidebar";
 import Link from "next/link";
 import '@/app/catalog/catalog.css';
 import products from "../data/products";
-// import clientPromise from '../lib/mongodb' ;
-import { ToastContainer, toast } from 'react-toastify';
 
 
 const Catalog = () => {
-
-    // const client = clientPromise;
-    // const db = client.db('drop'); // Replace with your database name
-    // const items = db.collection('products').find({}).toArray(); // Replace with your collection name
-
-    // useEffect(() => {
-    //     const fetchProducts = async () => {
-    //       const res = await fetch('../lib/api/products');
-    //       const data = await res.json();
-    //       setProd(data);
-    //     };
-
-    
-    //     fetchProducts();
-    //   }, []);
 
     return (
         <body className="bg-gray-100 block ">
@@ -53,15 +36,6 @@ const Catalog = () => {
                         <h2 className="text-xl font-bold mb-4">
                             Best Sellers in Home Décor Products
                         </h2>
-
-                        {/* <div>
-                        <h1>Items from MongoDB</h1>
-                        <ul>
-                            {items.map((item) => (
-                            <li key={item._id}>{item.name}</li> // Adjust according to your item structure
-                            ))}
-                        </ul>
-                        </div> */}
                         
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {products.map(product => (

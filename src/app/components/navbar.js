@@ -11,6 +11,12 @@ const NavBar = () => {
     };
 
     return (
+        <>
+             <div class="bg-gray-100">
+                <div class="bg-black text-white text-center py-2">
+                    <p class="font-bold">This is a Demo</p>
+                </div>
+            </div>
         <header classNameName='shadow-lg font-[sans-serif] tracking-wide relative z-50'>
             <section
                 className='flex items-center relative py-3 lg:px-10 px-4 border-gray-200 border-b bg-white lg:min-h-[70px] max-lg:min-h-[60px]'>
@@ -93,6 +99,7 @@ const NavBar = () => {
                 </div>
             )}
         </header>
+        </>
     );
 }
 
