@@ -1,11 +1,11 @@
-// import Footer from "../components/footer";
-// import NavBar from "../components/navbar";
+import Footer from "../components/footer";
+import NavBar from "../components/navbar";
 import React from "react";
 
 const Contactpage = () => {
     return (
         <>
-            {/* <NavBar /> */}
+            <NavBar />
             <div className="flex justify-center items-center h-screen ">
                 <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-4xl md:w-4/5 conBox">
                     <div className="flex flex-col md:flex-row">
@@ -23,7 +23,7 @@ const Contactpage = () => {
                                 <div className="relative">
                                     <textarea placeholder="Message" className="pl-4 pr-4 py-2 w-full border rounded-lg bg-gray-100 focus:outline-none h-32"></textarea>
                                 </div>
-                                <button type="submit" className="bg-teal-500 text-white py-2 px-4 rounded-lg w-full">Send Message</button>
+                                <button type="submit" className="bg-black text-white py-2 px-4 rounded-lg w-full">Send Message</button>
                             </form>
                         </div>
                         <div className="md:w-1/2 p-4 flex justify-center items-center conImg">
@@ -33,7 +33,7 @@ const Contactpage = () => {
                 </div>
 
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 }

@@ -6,6 +6,14 @@
     left: 20px ;
 }
 
+.itemCard{
+  height: 400px !important ;
+}
+.itemImg{
+  display: block !important;
+  height: 70% !important;
+}
+
 @media screen and (max-width : 800px ) {
     
 input[type="checkbox"]:checked ~ #sidebarMenu {

@@ -22,60 +22,30 @@ const ProductSideBar = () => {
                     <li className="font-bold">
                         Any Department
                     </li>
-                    <li>
-                        Home &amp; Kitchen
-                    </li>
-                    <li>
-                        Home Décor
-                    </li>
-                    <li>
-                        Artificial Plants &amp; Flowers
-                    </li>
-                    <li>
-                        Candles &amp; Holders
-                    </li>
-                    <li>
-                        Decorative Pillows, Inserts &amp; Covers
-                    </li>
-                    <li>
-                        Draft Stoppers
-                    </li>
-                    <li>
-                        Dried &amp; Preserved Flora
-                    </li>
-                    <li>
-                        Home Décor Accents
-                    </li>
-                    <li>
-                        Home Fragrance
-                    </li>
-                    <li>
-                        Indoor Fountains &amp; Accessories
-                    </li>
-                    <li>
-                        Kids' Room Décor
-                    </li>
-                    <li>
-                        Lamps &amp; Light Fixtures
-                    </li>
-                    <li>
-                        Mirrors
-                    </li>
-                    <li>
-                        Photo Frames
-                    </li>
-                    <li>
-                        Slipcovers
-                    </li>
-                    <li>
-                        Tapestries
-                    </li>
-                    <li>
-                        Wall Art
-                    </li>
-                    <li>
-                        Window Treatment Hardware
-                    </li>
+                    <li className="cursor-pointer ">
+                        Men's Wear 
+                    </li>  
+                    <li className="cursor-pointer ">
+                        Women's Wear 
+                    </li>  
+                    <li className="cursor-pointer ">
+                        Men Footwears 
+                    </li>  
+                    <li className="cursor-pointer ">
+                        Ladies Footwears 
+                    </li>  
+                    <li className="cursor-pointer ">
+                        Accessories 
+                    </li>   
+                    <li className="cursor-pointer ">
+                        Makeup and Skin care 
+                    </li> 
+                    <li className="cursor-pointer ">
+                        Holiday & Seasonal 
+                    </li> 
+                    <li className="cursor-pointer ">
+                        Deals Combo 
+                    </li> 
                 </ul>
             </aside>
             </>

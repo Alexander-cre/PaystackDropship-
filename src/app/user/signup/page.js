@@ -25,29 +25,33 @@ const SignUp = () => {
                         <h2 className="text-2xl font-bold">JOJO Marketplace</h2>
                     </div>
                     <h3 className="text-2xl font-bold mb-4">Welcome Buddy 😍</h3>
-                    <p className="text-gray-600 mb-6">Please Sign up here</p>
-                    <form className="space-y-4">
-                        <div>
-                            <label className="block text-gray-700">Email address</label>
-                            <input type="email" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black" />
-                        </div>
-                        <div>
-                            <label className="block text-gray-700">Password</label>
-                            <input type="password" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-black" />
-                        </div>
-                        <button type="submit" className="w-full bg-black text-white py-2 rounded-lg hover:bg-orange-600 transition duration-300">Login</button>
-                    </form>
-                    <div className="flex items-center justify-center mt-4">
-                        <span className="text-gray-600">Or login with</span>
-                    </div>
-                    <div className="flex items-center justify-center mt-4 space-x-4">
-                        <button className="flex items-center px-4 py-2 border rounded-lg hover:bg-gray-100 transition duration-300">
-                            <i className="fab fa-google text-red-500 mr-2"></i> Google
+                    <p className="text-gray-600 mb-6 font-bold text-lg">Sign up with socials 🎁</p>
+
+                    <div className="mt-10 grid space-y-4">
+                        <button
+                            className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
+                            <div className="relative flex items-center space-x-4 justify-center">
+                                <img src="https://www.svgrepo.com/show/475656/google-color.svg"
+                                    className="absolute left-0 w-5" alt="google logo" />
+                                <span
+                                    className="block w-max font-semibold tracking-wide text-gray-700 dark:text-white text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">Continue
+                                    with Google
+                                </span>
+                            </div>
                         </button>
-                        <button className="flex items-center px-4 py-2 border rounded-lg hover:bg-gray-100 transition duration-300">
-                            <i className="fab fa-facebook text-blue-500 mr-2"></i> Facebook
+                        <button
+                            className="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
+                            <div className="relative flex items-center space-x-4 justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute left-0 w-5 text-gray-700">
+                                <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.35C0 23.4.6 24 1.325 24h21.35C23.4 24 24 23.4 24 22.675V1.325C24 .6 23.4 0 22.675 0zm-2.675 12h-4v10h-4v-10h-3v-4h3V8c0-3.1 1.9-4 4-4 1.1 0 2 .1 2 .1v4h-2c-1 0-1 1-1 1v3h4l-1 4z"/>
+                            </svg>
+                                <span
+                                    className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition dark:text-white duration-300 group-hover:text-blue-600 sm:text-base">Continue
+                                    with Facebook
+                                </span>
+                            </div>
                         </button>
-                    </div>
+                    </div><br />
                     <span className="text-gray-600 text-center ">
                         <Link href={'signin'}> Already have an account ?</Link>
                     </span>

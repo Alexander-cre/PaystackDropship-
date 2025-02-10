@@ -6,6 +6,7 @@ import Link from "next/link";
 import '@/app/catalog/catalog.css';
 import products from "../data/products";
 // import clientPromise from '../lib/mongodb' ;
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Catalog = () => {
@@ -30,7 +31,7 @@ const Catalog = () => {
 
             <NavBar />
 
-            <header className="bg-teal-600 text-white text-center py-4">
+            <header className="bg-black text-white text-center py-4">
 
                 <h1 className="text-3xl font-bold">
                     Jojo Store Best Sellers
@@ -65,12 +66,12 @@ const Catalog = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {products.map(product => (
                                     <Link href={`/catalog/product-details/${product.id}`}>
-                                <div key={product.id} className="border p-4 rounded-lg shadow-md">
-                                        <img src="https://placehold.co/200x200" alt={product.name} className="w-full h-48 object-cover mb-2" />
+                                <div key={product.id} className="border p-4 rounded-lg shadow-md itemCard">
+                                        <img src="https://placehold.co/200x200" alt={product.name} className="w-full h-48 object-cover mb-2 itemImg" />
                                         <h2 className="text-lg font-semibold">{product.name}</h2>
                                         <div className="flex items-center mt-2">
-                                            <div className="text-red-500 text-lg font-bold">${product.price.toFixed(2)}</div>
-                                            <div className="text-gray-500 line-through ml-2">${product.original_price.toFixed(2)}</div>
+                                            <div className="text-red-500 text-lg font-bold"> &#8358; {product.price.toFixed(2)}</div>
+                                            <div className="text-gray-500 line-through ml-2">&#8358;{product.original_price.toFixed(2)}</div>
                                         </div>
                                         <div className="text-sm text-gray-500 mt-1">{product.ratings} ★ </div>
                                 </div>

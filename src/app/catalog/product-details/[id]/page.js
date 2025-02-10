@@ -8,6 +8,7 @@ import { useParams } from "next/navigation";
 import products from "@/app/data/products";
 import { useEffect, useState } from "react";
 import { useCart } from "@/app/layout";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -42,8 +43,7 @@ const productDetails = () => {
     
         // Store the item in local storage using the product ID as the key
         localStorage.setItem(itemToAdd.id, JSON.stringify(itemToAdd));
-        console.log("Added to cart:", itemToAdd); // Log the added item to the console
-        alert(`${product.name} has been added!`); // Alert the user
+        toast(`${product.name} has been added!`);
         }
     };
 
@@ -71,8 +71,10 @@ const productDetails = () => {
     // Render the product details
     return (
         <div className="">
+        <ToastContainer />
             <NavBar />
             <section className="flex flex-col lg:flex-row mt-8 p-4">
+
                 <div className="flex flex-col items-center lg:w-1/2">
                     <div className="w-full productImg ">
                         <img src="https://placehold.co/600x600" alt="Product Image" className="w-full similarImg" />
@@ -88,8 +90,8 @@ const productDetails = () => {
                 <div className="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
                     <h1 className="text-2xl font-bold uppercase"> {product.name}</h1>
                     <div className="flex items-center mt-2">
-                        <div className="text-red-500 text-xl font-bold">${product.price}</div>
-                        <div className="text-gray-500 line-through ml-2">${product.original_price}</div>
+                        <div className="text-red-500 text-xl font-bold">&#8358;{product.price}</div>
+                        <div className="text-gray-500 line-through ml-2">&#8358;{product.original_price}</div>
                     </div>
                     <div className="flex items-center mt-2">
                         <div className="text-red-500 text-sm font-bold">{product.ratings}</div>
@@ -148,23 +150,23 @@ const productDetails = () => {
                         <Link href='catalog/product-details'>
                         <img src="https://placehold.co/200x200" alt="Similar Item 1" className="w-full similarImg" />
                         <div className="mt-2 text-sm text-gray-800">Item 1</div>
-                        <div className="text-red-500 text-sm font-bold">$9.90</div>
+                        <div className="text-red-500 text-sm font-bold">&#8358;9.90</div>
                         </Link>
                     </div>
                     <div className="border p-4 similarCard">
                         <img src="https://placehold.co/200x200" alt="Similar Item 2" className="w-full similarImg" />
                         <div className="mt-2 text-sm text-gray-800">Item 2</div>
-                        <div className="text-red-500 text-sm font-bold">$9.90</div>
+                        <div className="text-red-500 text-sm font-bold">&#8358;9.90</div>
                     </div>
                     <div className="border p-4 similarCard">
                         <img src="https://placehold.co/200x200" alt="Similar Item 3" className="w-full similarImg" />
                         <div className="mt-2 text-sm text-gray-800">Item 3</div>
-                        <div className="text-red-500 text-sm font-bold">$9.90</div>
+                        <div className="text-red-500 text-sm font-bold">&#8358;9.90</div>
                     </div>
                     <div className="border p-4 similarCard">
                         <img src="https://placehold.co/200x200" alt="Similar Item 4" className="w-full similarImg" />
                         <div className="mt-2 text-sm text-gray-800">Item 4</div>
-                        <div className="text-red-500 text-sm font-bold">$9.90</div>
+                        <div className="text-red-500 text-sm font-bold">&#8358;9.90</div>
                     </div>
                 </div>
             </section>

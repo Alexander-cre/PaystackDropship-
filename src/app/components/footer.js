@@ -10,7 +10,10 @@ const Footer = () => {
                 <p>Sign up for the latest beauty news, product samples and coupons</p>
                 <div className="mb-4">
                     <label className="block text-sm font-bold mb-2" htmlFor="email">EMAIL ADDRESS*</label>
-                    <input className="w-full p-2 border border-gray-400 bg-black text-white" type="email" id="email" placeholder="Enter Your Email Address" />
+                    <div className="w-4/5 flex mx-auto my-auto">
+                    <input className="w-full p-1 email" type="email" id="email" placeholder="Enter Your Email Address" />
+                    <button className="bg-white text-black m-2 px-4 py-2 rounded " > Submit </button>
+                    </div>
                 </div>
                 <div className="flex justify-center space-x-4 mt-8">
                     <i className="fab fa-instagram"></i>

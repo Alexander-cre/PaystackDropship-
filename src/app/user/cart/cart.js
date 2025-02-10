@@ -5,6 +5,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from 'react';
 import { PaystackButton } from 'react-paystack';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Cart = () => {
@@ -39,10 +40,12 @@ const Cart = () => {
     const handleRemoveFromLocalStorage = (id) => {
         localStorage.removeItem(id);
         loadCartItems(); // Refresh the cart items after removal
+        toast('successfully removed from cart!');
     };
 
     const clearLocalStorage = () => {
         localStorage.clear();
+         toast('successfully cleared!');
         loadCartItems(); // Refresh the cart items after clearing
     };
 

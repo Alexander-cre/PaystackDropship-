@@ -1,66 +1,95 @@
+"use client" ;
+
 import Footer from "@/app/components/footer"
 import NavBar from "@/app/components/navbar";
 import Image from "next/image";
 import Link from "next/link";
+import "react-responsive-carousel/lib/styles/carousel.min.css" ;
+import { Carousel } from "react-responsive-carousel";
 
 export default function Home() {
   return (
     <div>
       <NavBar />
       <main className="">
-        <div className="bg-gray-500 text-white rounded-lg mb-4 slider">
-          <img src="" alt="/" />
-          <h1 className="text-3xl font-bold">Steal-worthy gifts under $10</h1>
-          <p>Shop white elephant</p>
-        </div>
+
+        {/* SLider  */}
+
+        <div className="text-black align-bottom rounded-lg mb-4  slider">
+          <Carousel
+          autoPlay
+          infiniteLoop
+          showThumbs={false}
+          >
+          <div className="">
+            <img src="https://images.pexels.com/photos/2877180/pexels-photo-2877180.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
+          </div>
+
+          <div className="">
+            <img src="https://images.pexels.com/photos/16032224/pexels-photo-16032224/free-photo-of-smiling-models-posing-in-sunglasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
+          </div>
+
+          <div className="">
+            <img src="https://images.pexels.com/photos/5319503/pexels-photo-5319503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
+          </div>
+
+          <div className="">
+            <img src="https://images.pexels.com/photos/17245493/pexels-photo-17245493/free-photo-of-a-man-wearing-sunglasses-and-a-green-sweater.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
+          </div>
+
+          </Carousel>
+        </div><br />
+
+        {/*  Slider*/}
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-2">
           <div className="bg-white p-2 rounded-lg shadow-lg boxoutercon">
             <h2 className="text-xl font-bold mb-2">Shop gifts by recipient</h2>
             <div className="grid grid-cols-2 gap-2 ">
               <div className="innerbox mb-4">
-                <img src="https://placehold.co/100x100" alt="For him" className="w-full" />
+                <img src="https://images.pexels.com/photos/6831608/pexels-photo-6831608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
                 <p className="text-center">For him</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://placehold.co/100x100" alt="For her" className="w-full" />
+                <img src="https://images.pexels.com/photos/17243615/pexels-photo-17243615/free-photo-of-a-woman-in-a-pink-skirt-and-white-top-is-posing-on-a-railing.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
                 <p className="text-center">For her</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://placehold.co/100x100" alt="For kids" className="w-full" />
-                <p className="text-center">For kids</p>
+                <img src="https://images.pexels.com/photos/13020508/pexels-photo-13020508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
+                <p className="text-center">Jewelries</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://placehold.co/100x100" alt="For teens" className="w-full" />
-                <p className="text-center">For teens</p>
+                <img src="https://placehold.co/100x100" alt="/" className="w-full" />
+                <p className="text-center">Sneakers</p>
               </div>
             </div>
             <a href="#" className="text-blue-500 mt-2 block text-center">Shop all gifts</a>
           </div>
           <div className="bg-white p-2 rounded-lg shadow-lg boxoutercon">
-            <h2 className="text-xl font-bold mb-2">Makeup Kits</h2>
+            <h2 className="text-xl font-bold mb-2">Makeup Kits and Skin care</h2>
             <div className="grid grid-cols-2 gap-2">
               <div className="innerbox mb-4">
-                <img src="https://placehold.co/100x100" alt="Headsets" className="w-full" />
-                <p className="text-center">Headsets</p>
+                <img src="https://images.pexels.com/photos/3762466/pexels-photo-3762466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
+                <p className="text-center">Skin care</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://placehold.co/100x100" alt="Keyboards" className="w-full" />
-                <p className="text-center">Keyboards</p>
+                <img src="https://images.pexels.com/photos/5128264/pexels-photo-5128264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
+                <p className="text-center">Makeup kits </p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://placehold.co/100x100" alt="Computer mice" className="w-full" />
-                <p className="text-center">Computer mice</p>
+                <img src="https://images.pexels.com/photos/6724357/pexels-photo-6724357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
+                <p className="text-center">Toners</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://placehold.co/100x100" alt="Chairs" className="w-full" />
-                <p className="text-center">Chairs</p>
+                <img src="https://images.pexels.com/photos/2764973/pexels-photo-2764973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
+                <p className="text-center">Hair grooming</p>
               </div>
             </div>
             <a href="#" className="text-blue-500 mt-2 block text-center">See more</a>
           </div>
           <div className="bg-white p-2 rounded-lg shadow-lg boxoutercon">
-            <h2 className="text-xl font-bold mb-2">Deals in Gadgets</h2>
-            <img src="https://placehold.co/200x200" alt="Gadget Deals" className="w-full" />
+            <h2 className="text-xl font-bold mb-2">Deals in Home Appliances</h2>
+            <img src="https://images.pexels.com/photos/30617433/pexels-photo-30617433/free-photo-of-cozy-vintage-kitchen-with-rustic-decor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gadget Deals" className="w-full" />
             <a href="#" className="text-blue-500 mt-2 block text-center">Shop now</a>
           </div>
         </div>
@@ -70,33 +99,33 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 ">
           <div className="border border-2 p-2 rounded-lg holitab  shadow-lg ">
             <div className="mainholibox">
-              <h2 className="font-bold mb-2">Top categories in Kitchen appliances</h2>
-              <img src="https://placehold.co/300x200" alt="Cooker" />
+              <h2 className="font-bold mb-2"> Top products in accessories</h2>
+              <img src="https://images.pexels.com/photos/8706581/pexels-photo-8706581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
             </div>
 
             <div className="grid grid-cols-3 gap-2 mt-12 sm:grid-cols-0">
               <div className="miniholibox">
-                <img src="https://placehold.co/150x100" alt="Coffee" className="mb-1 kitchenMini" />
-                <p>Coffee</p>
+                <img src="https://images.pexels.com/photos/6931828/pexels-photo-6931828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="mb-1 kitchenMini" />
+                <p>Power ring</p>
               </div>
               <div className="miniholibox">
-                <img src="https://placehold.co/150x100" alt="Pots and Pans" className="mb-1 kitchenMini" />
-                <p>Pots and Pans</p>
+                <img src="https://images.pexels.com/photos/30620653/pexels-photo-30620653/free-photo-of-festive-eyewear-display-with-holiday-decor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="mb-1 kitchenMini" />
+                <p>Anti-blue light glasses</p>
               </div>
               <div className="miniholibox">
-                <img src="https://placehold.co/150x100" alt="Kettles" className="mb-1 kitchenMini" />
-                <p>Kettles</p>
+                <img src="https://images.pexels.com/photos/19195396/pexels-photo-19195396/free-photo-of-blonde-hair-model-bitting-necklace.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="mb-1 kitchenMini" />
+                <p>Contact Lens</p>
               </div>
             </div>
           </div>
           <div className="border border-2 p-2 rounded-lg shadow-lg holitab gifttab">
-            <h2 className="font-bold mb-2">Get your game on</h2>
-            <img src="https://placehold.co/300x200" alt="Gaming setup" className="mb-2" />
-            <a href="#" className="text-blue-500 mt-2 block">Shop gaming</a>
+            <h2 className="font-bold mb-2">Fashion world</h2>
+            <img src="https://images.pexels.com/photos/30557056/pexels-photo-30557056/free-photo-of-portrait-of-woman-with-red-hair-in-black-suit.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gaming setup" className="mb-2" />
+            <a href="#" className="text-blue-500 mt-2 block">Shop Classy wears</a>
           </div>
           <div className="border border-2 p-2 rounded-lg shadow-lg holitab gifttab">
-            <h2 className="font-bold mb-2">Small gifts under $20</h2>
-            <img src="https://placehold.co/300x200" alt="Amazon gift box" className="mb-2" />
+            <h2 className="font-bold mb-2">Love Season</h2>
+            <img src="https://images.pexels.com/photos/5332423/pexels-photo-5332423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="mb-2" />
             <a href="#" className="text-blue-500 mt-2 block">Shop now</a>
           </div>
         </div>
@@ -109,31 +138,31 @@ export default function Home() {
           <div className="flex overflow-x-auto space-x-4 slides">
             <div className="flex-shrink-0 text-center roundtab">
               <div className="items-center justify-center mb-2 sliderImgCon">
-                <img src="https://placehold.co/100x100" alt="Holiday deals" />
+                <img src="https://images.pexels.com/photos/5868272/pexels-photo-5868272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Holiday deals" />
               </div>
-              <p>Holiday deals</p>
+              <p>Black Friday deals</p>
             </div>
             <div className="flex-shrink-0 text-center roundtab">
               <div className="ms-center justify-center mb-2 sliderImgCon">
-                <img src="https://placehold.co/100x100" alt="Most loved deals" />
+                <img src="https://images.pexels.com/photos/7957748/pexels-photo-7957748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Most loved deals" />
               </div>
               <p>Most loved deals</p>
             </div>
             <div className="flex-shrink-0 text-center roundtab">
               <div className="items-center justify-center mb-2 sliderImgCon">
-                <img src="https://placehold.co/100x100" alt="Deals under $50" />
+                <img src="https://images.pexels.com/photos/5935748/pexels-photo-5935748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
               </div>
               <p>Deals under $50</p>
             </div>
             <div className="flex-shrink-0 text-center roundtab">
               <div className="items-center justify-center mb-2 sliderImgCon">
-                <img src="https://placehold.co/100x100" alt="Deals on Computer" />
+                <img src="https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
               </div>
-              <p>Deals on Computer</p>
+              <p>Deals on Sneakers</p>
             </div>
             <div className="flex-shrink-0 text-center roundtab">
               <div className="items-center justify-center mb-2 sliderImgCon">
-                <img src="https://placehold.co/100x100" alt="Deals" />
+                <img src="https://images.pexels.com/photos/5632381/pexels-photo-5632381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
               </div>
               <p>Deals</p>
             </div>

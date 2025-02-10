@@ -14,9 +14,9 @@ const NavBar = () => {
         <header classNameName='shadow-lg font-[sans-serif] tracking-wide relative z-50'>
             <section
                 className='flex items-center relative py-3 lg:px-10 px-4 border-gray-200 border-b bg-white lg:min-h-[70px] max-lg:min-h-[60px]'>
-                <a href="javascript:void(0)" className="shrink-0 max-sm:hidden"><img
-                    src="https://storage.googleapis.com/a1aa/image/1c8d7065-b538-4560-a760-ad6455a46e01.jpeg" alt="logo" className='sm:w-[150px] w-32' />
-                </a>
+                <Link href="/" className="shrink-0 max-sm:hidden"><img
+                    src="JOJO.png" alt="logo" className='sm:w-[150px] logoImg' />
+                </Link>
                 <a href="/" className="hidden max-sm:block"><img src="" alt="logo" className='w-9' />
                 </a>
 

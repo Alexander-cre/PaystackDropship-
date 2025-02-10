@@ -5,37 +5,27 @@ import NavBar from '../components/navbar';
 import ProfileSideBar from '../components/profilesidebar';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import './profilecomponent.css' ;
+import './profilecomponent.css';
 const UserProfile = () => {
 
     return (
         <>
-        <NavBar />
-                        <div className="min-h-screen flex flex-col">
-                            <header className="bg-white shadow p-4 flex justify-between items-center">
-                                <div className="flex items-center">
-                                    <img src="https://placehold.co/40x40" alt="Logo" className="mr-2"/>
-                                    <div>
-                                        <h1 className="text-xl font-bold">Profile</h1>
-                                        <p className="text-2xl text-gray-500">Welcome to JOJO Marketplace </p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center">
-                                    <img src="https://placehold.co/40x40" alt="User" className="rounded-full mr-2"/>
-                                    <span>Hello Sami</span>
-                                </div>
-                            </header>
-                            <div className="flex flex-1 mx-auto mt-6 px-4">
-
-                                <ProfileSideBar />
-
+            <NavBar />
+            <div className="min-h-screen flex flex-col p-12">
+                <div className="flex flex-1">
+                    <ProfileSideBar />
+                    <main className="flex-1 p-4">
+                        <div className="bg-white p-4 rounded shadow">
+                            <div className="flex items-center justify-between border-b pb-2 mb-4">
+                            </div>
+                            <div className="space-y-4">
                                 <main className="flex-1 p-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="bg-white p-6 rounded-lg shadow">
                                             <div className="flex items-center mb-4 proInfo">
-                                                <img src="https://placehold.co/100x100" alt="Profile" className="rounded-full mr-4"/>
+                                                <img src="https://placehold.co/100x100" alt="Profile" className="rounded-full mr-4" />
                                                 <div>
-                                                    <h2 className="text-lg font-bold">My profile</h2>
+                                                    <h2 className="text-2xl font-bold">My profile</h2>
                                                     <p className="text-sm text-gray-500">Last login : 07 Aug 2019 14:48</p>
                                                     <p className="text-sm text-gray-500">Woodland Heights, Texas, USA</p>
                                                 </div>
@@ -51,10 +41,13 @@ const UserProfile = () => {
                                 </main>
                             </div>
                         </div>
-                        <Footer />
-        
-    </>
-        
+                    </main>
+                </div>
+            </div>
+            <Footer />
+
+        </>
+
     );
 }
 

@@ -1,6 +1,7 @@
 import NavBar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 import React from "react";
+import ProfileSideBar from "@/app/components/profilesidebar";
 
 const Notifications = () => {
     
@@ -57,7 +58,15 @@ const Notifications = () => {
             return (
                 <div >
                     <NavBar />
-                <div className="max-w-4xl mx-auto p-4">
+                <div className="min-h-screen flex flex-col p-12">
+                <div className="flex flex-1">
+                    <ProfileSideBar />
+                    <main className="flex-1 p-4">
+                        <div className="bg-white p-4 rounded shadow">
+                            <div className="flex items-center justify-between border-b pb-2 mb-4">
+                            </div>
+                            <div className="space-y-4">
+                            <div className="max-w-4xl mx-auto p-4">
                     <h1 className="text-2xl font-bold mb-4">NOTIFICATIONS</h1>
                     <div className="bg-white shadow-md rounded-lg">
                         {notifications.map((notification, index) => (
@@ -82,6 +91,13 @@ const Notifications = () => {
                         ))}
                     </div>
                 </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+
+
                 <Footer />
                 </div>
        

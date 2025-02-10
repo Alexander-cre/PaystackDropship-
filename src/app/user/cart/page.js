@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
+import NavBar from '@/app/components/navbar';
+import Footer from '@/app/components/footer';
 
 
 // Dynamically import the component
@@ -14,8 +16,11 @@ const DynamicComponent = dynamic(() => import('../cart/cart'), {
 const CartPage = () =>{
         return (
             <div>
+              <NavBar /><br /><br />
                 {/* Cart Page Headline SHopping Cart  */}
               <DynamicComponent />
+              <br /><br />
+              <Footer />
             </div>
     )
 }
