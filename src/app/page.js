@@ -21,19 +21,19 @@ export default function Home() {
           infiniteLoop
           showThumbs={false}
           >
-          <div className="">
+          <div className="slideInnerImg">
             <img src="https://images.pexels.com/photos/2877180/pexels-photo-2877180.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
           </div>
 
-          <div className="">
+          <div className="slideInnerImg">
             <img src="https://images.pexels.com/photos/16032224/pexels-photo-16032224/free-photo-of-smiling-models-posing-in-sunglasses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
           </div>
 
-          <div className="">
+          <div className="slideInnerImg">
             <img src="https://images.pexels.com/photos/5319503/pexels-photo-5319503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
           </div>
 
-          <div className="">
+          <div className="slideInnerImg">
             <img src="https://images.pexels.com/photos/17245493/pexels-photo-17245493/free-photo-of-a-man-wearing-sunglasses-and-a-green-sweater.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
           </div>
 

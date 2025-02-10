@@ -15,7 +15,7 @@ const SignUp = () => {
                         </div>
                         JOJO Online B2C Platform.</h1>
                     <p className="text-lg">Simplify your shopping experience with our unique store. </p>
-                    <img src="https://placehold.co/300x400" alt="Two people standing" className="mt-8 w-full h-auto rounded-lg imgCOn" />
+                    <img src="afro.svg" alt="Two people standing" className="mt-8 w-full h-auto rounded-lg imgCOn" />
                 </div>
                 <div className="p-8 md:w-1/2 flex flex-col justify-center">
                     <div className="flex items-center mb-8">
@@ -34,7 +34,7 @@ const SignUp = () => {
                                 <img src="https://www.svgrepo.com/show/475656/google-color.svg"
                                     className="absolute left-0 w-5" alt="google logo" />
                                 <span
-                                    className="block w-max font-semibold tracking-wide text-gray-700 dark:text-white text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">Continue
+                                    className="block w-max font-semibold tracking-wide text-black dark:text-white text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">Continue
                                     with Google
                                 </span>
                             </div>
@@ -46,7 +46,7 @@ const SignUp = () => {
                                 <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.35C0 23.4.6 24 1.325 24h21.35C23.4 24 24 23.4 24 22.675V1.325C24 .6 23.4 0 22.675 0zm-2.675 12h-4v10h-4v-10h-3v-4h3V8c0-3.1 1.9-4 4-4 1.1 0 2 .1 2 .1v4h-2c-1 0-1 1-1 1v3h4l-1 4z"/>
                             </svg>
                                 <span
-                                    className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition dark:text-white duration-300 group-hover:text-blue-600 sm:text-base">Continue
+                                    className="block w-max font-semibold tracking-wide text-black text-sm transition dark:text-white duration-300 group-hover:text-blue-600 sm:text-base">Continue
                                     with Facebook
                                 </span>
                             </div>
