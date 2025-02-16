@@ -46,7 +46,7 @@ const OrderTracking = () => {
                                 </div>
                             </div>
                         </div>
-                        <button class="border border-gray-400 px-4 py-2">TRACK PACKAGE</button>
+                        
                     </div>
                     <div class="mb-4">
                         <p class="text-gray-600">Tracking: <a href="#" class="text-blue-600">7263924876518</a></p>
@@ -65,7 +65,7 @@ const OrderTracking = () => {
                         <p>John Newman</p>
                         <p><a href="mailto:john.newman.bayward@gmail.com" class="text-blue-600">john.newman.bayward@gmail.com</a></p>
                         <p>1-888-946-6456</p>
-                    </div>
+                    </div><br />
                     <Footer />
                 </div>
             );

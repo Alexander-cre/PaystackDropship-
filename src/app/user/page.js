@@ -11,10 +11,10 @@ const UserProfile = () => {
     return (
         <>
             <NavBar />
-            <div className="min-h-screen flex flex-col p-12">
+            <div className="min-h-screen flex flex-col">
                 <div className="flex flex-1">
                     <ProfileSideBar />
-                    <main className="flex-1 p-4">
+                    <main className="flex-1">
                         <div className="bg-white p-4 rounded shadow">
                             <div className="flex items-center justify-between border-b pb-2 mb-4">
                             </div>

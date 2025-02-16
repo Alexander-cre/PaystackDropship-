@@ -47,20 +47,20 @@ export default function Home() {
             <h2 className="text-xl font-bold mb-2">Shop gifts by recipient</h2>
             <div className="grid grid-cols-2 gap-2 ">
               <div className="innerbox mb-4">
-                <img src="https://images.pexels.com/photos/6831608/pexels-photo-6831608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
-                <p className="text-center bg-transparent">For him</p>
+                <img src="https://images.pexels.com/photos/6831608/pexels-photo-6831608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className=" mb-6 w-full" />
+                <p className="text-center text-small">For him</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://images.pexels.com/photos/17243615/pexels-photo-17243615/free-photo-of-a-woman-in-a-pink-skirt-and-white-top-is-posing-on-a-railing.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
-                <p className="text-center bg-transparent ">For her</p>
+                <img src="https://images.pexels.com/photos/17243615/pexels-photo-17243615/free-photo-of-a-woman-in-a-pink-skirt-and-white-top-is-posing-on-a-railing.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className=" mb-6 w-full" />
+                <p className="text-center text-small ">For her</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://images.pexels.com/photos/13020508/pexels-photo-13020508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
-                <p className="text-center bg-transparent">Jewelries</p>
+                <img src="https://images.pexels.com/photos/13020508/pexels-photo-13020508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className=" mb-6 w-full" />
+                <p className="text-center text-small">Jewelries</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://www.berluti.com/dw/image/v2/BBMR_PRD/on/demandware.static/-/Sites-masterCatalog_Berluti/default/dw1cf8f89a/images/S6011-016_shadow-knit-and-calf-leather-sneaker_gradiant-rust_berluti_01.jpg?sw=320" alt="/" className="w-full" />
-                <p className="text-center bg-transparent">Sneakers</p>
+                <img src="https://www.berluti.com/dw/image/v2/BBMR_PRD/on/demandware.static/-/Sites-masterCatalog_Berluti/default/dw1cf8f89a/images/S6011-016_shadow-knit-and-calf-leather-sneaker_gradiant-rust_berluti_01.jpg?sw=320" alt="/" className=" mb-6 w-full" />
+                <p className="text-center text-small">Sneakers</p>
               </div>
             </div>
             <a href="#" className="text-blue-500 mt-2 block text-center">Shop all gifts</a>
@@ -69,20 +69,20 @@ export default function Home() {
             <h2 className="text-xl font-bold mb-2">Makeup Kits and Skin care</h2>
             <div className="grid grid-cols-2 gap-2">
               <div className="innerbox mb-4">
-                <img src="https://images.pexels.com/photos/3762466/pexels-photo-3762466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
-                <p className="text-center">Skin care</p>
+                <img src="https://images.pexels.com/photos/3762466/pexels-photo-3762466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className=" mb-6 w-full" />
+                <p className="text-center text-small">Skin care</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://images.pexels.com/photos/5128264/pexels-photo-5128264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
-                <p className="text-center">Makeup kits </p>
+                <img src="https://images.pexels.com/photos/5128264/pexels-photo-5128264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className=" mb-6 w-full" />
+                <p className="text-center text-small">Makeup kits </p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://images.pexels.com/photos/6724357/pexels-photo-6724357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
-                <p className="text-center">Toners</p>
+                <img src="https://images.pexels.com/photos/6724357/pexels-photo-6724357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className=" mb-6 w-full" />
+                <p className="text-center text-small">Toners</p>
               </div>
               <div className="innerbox mb-4">
-                <img src="https://images.pexels.com/photos/2764973/pexels-photo-2764973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="w-full" />
-                <p className="text-center">Hair grooming</p>
+                <img src="https://images.pexels.com/photos/2764973/pexels-photo-2764973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className=" mb-6 w-full" />
+                <p className="text-center text-small">Hair grooming</p>
               </div>
             </div>
             <a href="#" className="text-blue-500 mt-2 block text-center">See more</a>
@@ -103,18 +103,18 @@ export default function Home() {
               <img src="https://images.pexels.com/photos/8706581/pexels-photo-8706581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" />
             </div>
 
-            <div className="grid grid-cols-3 gap-2 mt-12 sm:grid-cols-0">
+            <div className="grid grid-cols-3 gap-2 mt-4 sm:grid-cols-0">
               <div className="miniholibox">
                 <img src="https://images.pexels.com/photos/6931828/pexels-photo-6931828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="mb-1 kitchenMini" />
-                <p>Power ring</p>
+                <p className='text-small'>Power ring</p>
               </div>
               <div className="miniholibox">
                 <img src="https://images.pexels.com/photos/30620653/pexels-photo-30620653/free-photo-of-festive-eyewear-display-with-holiday-decor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="mb-1 kitchenMini" />
-                <p>Anti-blue light glasses</p>
+                <p className='text-small'>Anti-blue light glasses</p>
               </div>
               <div className="miniholibox">
                 <img src="https://images.pexels.com/photos/19195396/pexels-photo-19195396/free-photo-of-blonde-hair-model-bitting-necklace.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className="mb-1 kitchenMini" />
-                <p>Contact Lens</p>
+                <p className='text-small'>Contact Lens</p>
               </div>
             </div>
           </div>

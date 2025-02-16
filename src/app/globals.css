@@ -4,6 +4,14 @@
 
 body{
   background: whitesmoke ;
+  max-width : 1440px ;
+  height : auto ;
+  position : relative ;
+  margin : 0 auto 0 auto !important ;
+  overflow-x : hidden !important ;
+}
+*{
+  overflow-x : hidden !important ;
 }
 
 /* signin and signup pages */
@@ -12,18 +20,21 @@ body{
   height: 200px ;
   width: 100% ;
 }
-.miniholibox
+
 .innerbox{
   display: block ;
   height: 170px ;
   width: 100% ;
   background: whitesmoke ;
+  overflow-y : hidden !important ;
 } 
 .innerbox img{
   width: 100% !important;
-  height: 80% !important;
+  height: 65% !important;
   object-fit: cover !important;
   object-position: center top !important;
+  display : block !important ;
+  overflow-y : hidden !important ;
 }
 .email{
   background: none !important;
@@ -89,22 +100,25 @@ body{
 
 .mainholibox{
   height: 230px !important;
+  overflow-y:hidden !important ;
   }
 .mainholibox img{
   width: 100% !important ;
   height: 250px !important ;
   object-fit: cover ;
+  overflow-y : hidden !important ;
   object-position: center ;
   margin-bottom: 20px ;
 }
 .miniholibox{
   margin-top: 20px ;
-  height: 150px ;
+  height: 100% ;
+  overflow-y : hidden !important ;
   width: 100% ;
   }
 .miniholibox img{
   width: 100% ;
-  height: 100% ;
+  height: 60% ;
   object-fit: cover ;
   object-position:  center ;
 }
@@ -144,26 +158,34 @@ body{
 
 
 /* Similar Card Product */
+.similarSLide{
+  overflow-y : hidden ;
+  height :100% !important ;
+  padding :2px ;
+}
 .similarCard{
-  height: 320px ;
+  height: 300px ;
 }
 .similarImg{
-  height: 100% ;
+  height: 70% ;
   width: 100% ;
   object-fit: contain ;
   object-position: center ;
   display: inline-block ;
+  overflow-y : hidden !important ;
+  overflow-x : hidden !important ;
 }
+
 /* Product details  */
 
 .productImg{
-    width: 90% ;
+  width: 90% ;
   display: block ;
   height: 400px !important ;
 }
 .logoImg{
   width: 100% !important;
-  height: 100px !important;
+  height: 80px !important;
 }
 .smallImg img{
   object-fit: contain ;

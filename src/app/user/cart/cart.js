@@ -118,7 +118,7 @@ const Cart = () => {
         <>
 
             {/* <NavBar /> */}
-            <div className="container mx-auto p-4">
+            <div className="container mx-auto p-2">
                 <div className="flex flex-col lg:flex-row justify-between cart-con ">
                     <div className="w-full lg:w-2/3">
                         <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
@@ -149,12 +149,11 @@ const Cart = () => {
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-2 md:grid-cols-0 items-center">
-                                        <p className="text-lg font-semibold mr-4">N {item.price}</p>
+                                        <div className="text-lg font-semibold w-full mr-8">&#8358; {item.price}</div>
                                         <button className="text-gray-500"
                                             onClick={() => handleRemoveFromLocalStorage(item.id)}
                                         >
-                                            <i className="fas fa-trash"></i>
-                                            <img src="https://www.svgrepo.com/show/488148/delete.svg" alt="Delete" width={20} height={20} />
+                                            <img src="https://www.svgrepo.com/show/488148/delete.svg" className='ml-4' alt="Delete" width={20} height={20} />
                                         </button>
                                     </div>
                                 </div>
@@ -168,7 +167,7 @@ const Cart = () => {
                     </div>
                     
                     <div className="w-full lg:w-1/3 mt-4 lg:mt-0 lg:ml-4">
-                        <div className="p-4 bg-white rounded-lg shadow-md">
+                        <div className="p-2 bg-white rounded-lg shadow-md">
                             <h2 className="text-2xl font-semibold mb-4">Delivery</h2>
                             <h3>Select Delivery Option:</h3>
                             <div className="flex justify-between mb-4">
@@ -182,7 +181,7 @@ const Cart = () => {
                                     className={`px-4 py-2 rounded-lg ${deliveryOption === 'express' ? 'bg-black text-white' : 'bg-gray-200 hover:bg-black hover:text-white'}`}
                                     onClick={() => setDeliveryOption('express')}
                                 >
-                                    Express: N 9.99
+                                    Express:  &#8358; 9.99
                                 </button>
                             </div>
                             <p className="text-gray-500 mb-4">Delivery date: June 24, 2022</p>
@@ -192,11 +191,11 @@ const Cart = () => {
                             </div>
                             <div className="flex justify-between mb-2">
                                 <p className="text-gray-500">Delivery</p>
-                                <p>N 0.00</p>
+                                <p> &#8358; 0.00</p>
                             </div>
                             <div className="flex justify-between mb-4">
                                 <p className="text-lg font-semibold">Total</p>
-                                <p className="text-lg font-semibold">N {calculateTotalPrice()}</p>
+                                <p className="text-lg font-semibold"> &#8358; {calculateTotalPrice()}</p>
                             </div>
                                 <button className="w-full px-4 py-2 bg-black text-white rounded-lg mb-4">
                                 <PaystackButton {...componentProps} />

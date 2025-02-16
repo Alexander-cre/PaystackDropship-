@@ -10,9 +10,6 @@ import { useEffect, useState } from "react";
 import { useCart } from "@/app/layout";
 import { ToastContainer, toast } from 'react-toastify';
 
-
-
-
 const productDetails = () => {
 
     const params = useParams();
@@ -79,9 +76,7 @@ const productDetails = () => {
                     <div className="w-full productImg ">
                         <img src="https://placehold.co/600x600" alt="Product Image" className="w-full similarImg" />
                     </div>
-                    <div className="grid grid-cols-5 gap-6 items-center mt-4 smallImg">
-                        <img src="https://placehold.co/50x50" alt="/" className="w-24 h-24 border border-2" />
-                        <img src="https://placehold.co/50x50" alt="/" className="w-24 h-24 border border-2" />
+                    <div className="grid grid-cols-3 gap-6 items-center mt-4 smallImg">
                         <img src="https://placehold.co/50x50" alt="/" className="w-24 h-24 border border-2" />
                         <img src="https://placehold.co/50x50" alt="/" className="w-24 h-24 border border-2" />
                         <img src="https://placehold.co/50x50" alt="/" className="w-24 h-24 border border-2" />
@@ -145,7 +140,7 @@ const productDetails = () => {
             </section>
             <section className="mt-8 p-4">
                 <h2 className="text-xl font-bold">SIMILAR ITEMS</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 similarSLide">
                     <div className="border p-4 similarCard" >
                         <Link href='catalog/product-details'>
                         <img src="https://placehold.co/200x200" alt="Similar Item 1" className="w-full similarImg" />

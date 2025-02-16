@@ -12,23 +12,18 @@ const NavBar = () => {
 
     return (
         <>
-             <div class="bg-gray-100">
-                <div class="bg-black text-white text-center py-2">
-                    <p class="font-bold">This is a Demo</p>
-                </div>
-            </div>
         <header classNameName='shadow-lg font-[sans-serif] tracking-wide relative z-50'>
             <section
-                className='flex items-center relative py-3 lg:px-10 px-4 border-gray-200 border-b bg-white lg:min-h-[70px] max-lg:min-h-[60px]'>
-                <Link href="/" className="shrink-0 max-sm:hidden"><img
-                    src="JOJO.png" alt="logo" className='sm:w-[150px] logoImg' />
+                className='flex items-center  relative py-3 lg:px-10 px-4 border-gray-200 border-b bg-white lg:min-h-[70px] max-lg:min-h-[60px]'>
+                <span className="">   
+                <Link href="/" className="shrink-0 ">
+                <img src="/JOJO.png" alt="" className='sm:w-[150px]  logoImg' />
                 </Link>
-                <a href="/" className="hidden max-sm:block"><img src="" alt="logo" className='w-9' />
-                </a>
+                </span>
 
                 <div className='flex flex-wrap w-full items-center'>
                     <input type='text' placeholder='Search something...'
-                        className='xl:w-80 max-lg:hidden lg:ml-10 max-md:mt-4 max-lg:ml-4 bg-gray-100 border focus:bg-transparent px-4 rounded h-10 outline-none text-sm transition-all' />
+                        className='xl:w-80 block border-2 max-sm:hidden border-gray-500  lg:ml-10 max-md:mt-4 max-lg:ml-4 bg-gray-100 border focus:bg-transparent px-4 rounded h-10 outline-none text-sm transition-all' />
                     <div className="ml-auto">
 
                         <ul className='flex items-center'>
@@ -50,12 +45,10 @@ const NavBar = () => {
                                             d="M164.96 300.004h.024c.02 0 .04-.004.059-.004H437a15.003 15.003 0 0 0 14.422-10.879l60-210a15.003 15.003 0 0 0-2.445-13.152A15.006 15.006 0 0 0 497 60H130.367l-10.722-48.254A15.003 15.003 0 0 0 105 0H15C6.715 0 0 6.715 0 15s6.715 15 15 15h77.969c1.898 8.55 51.312 230.918 54.156 243.71C131.184 280.64 120 296.536 120 315c0 24.812 20.188 45 45 45h272c8.285 0 15-6.715 15-15s-6.715-15-15-15H165c-8.27 0-15-6.73-15-15 0-8.258 6.707-14.977 14.96-14.996zM477.114 90l-51.43 180H177.032l-40-180zM150 405c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm167 15c0 24.813 20.188 45 45 45s45-20.188 45-45-20.188-45-45-45-45 20.188-45 45zm45-15c8.27 0 15 6.73 15 15s-6.73 15-15 15-15-6.73-15-15 6.73-15 15-15zm0 0"
                                             data-original="#000000"></path>
                                     </svg>
-                                    <span
-                                        className="absolute left-auto -ml-1 -top-2 rounded-full bg-red-500 px-1 py-0 text-xs text-white">3</span>
                                 </span>
                                 </Link>
                             </li>
-                            <li className='flex text-[15px] max-lg:py-2 px-4 hover:text-[#007bff] hover:fill-[#007bff]'>
+                            <li className='flex text-[15px] max-lg:py-2 px-4 hover:text-[#007bff] hover:fill-[#007bff] max-md:hidden'>
                                 <Link href={'/user/signin'}>
                                     <button
                                         className='px-4 py-2 text-sm font-semibold text-gray-800 border border-[#333] bg-transparent'>
