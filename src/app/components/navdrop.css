@@ -1,0 +1,85 @@
+.navHead{
+    height : 100px !important ;
+    padding : 5px ;
+}
+.logoNavBox{
+    display : block ;
+    position : absolute !important ;
+    left : 2% ;
+}
+.logoImg{
+    display : block ;
+    width : 200px ;
+    height : 90px ;
+    object-fit : contain !important ;
+    object-position : center ;
+}
+/* #sidebarMenu::-webkit-scrollbar{width : 5px; height: 2px;}
+#sidebarMenu::-webkit-scrollbar-thumb{ background: rgb(79, 75, 75); border-radius: 10px;}
+#sidebarMenu::-webkit-scrollbar-track{ background : transparent;} */
+ul{
+    display : flex ;
+}
+.sidebarMenuInner{
+    margin:0;
+    position: relative ;
+    text-align: left ;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+@media screen and (max-width : 800px) {
+    #navBarMenu {
+        height: 100vh !important ;
+        position: fixed;
+        right : 0;
+        text-align: left  !important;
+        width: 60% ;
+        transition: transform 250ms ease-in-out;
+        transform: translateX(1200px);
+        background: white  ;  
+        margin : 0 ;
+        z-index: 99;
+        overflow-y: scroll ;
+        display : inline-block ;
+    }
+    ul{
+        display : block !important ;
+        }
+
+    input[type="checkbox"]#navCheckBox:checked ~ #navBarMenu {
+        transform : translateX(0px) !important ;
+        transition: linear .5s ;
+    }
+    
+    input[type=checkbox] {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        display: none;
+    }
+    .side{
+        display: none ;
+        visibility: hidden ;
+    }
+    .navIcon {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: absolute;
+        display: block !important ;
+        z-index: 100 !important;
+        height: 40px !important;
+        width: 40px !important;
+        top: 22px !important;
+        right : 20px !important;
+        height: 100px ;
+        margin-top : 10px ;
+        position: fixed !important;
+    }
+    /* #navBarMenu {
+        text-align: left !important;
+        width: 300px ;
+        z-index: 99;
+        overflow-y: scroll ;
+    } */
+}
+

@@ -143,8 +143,8 @@ const Cart = () => {
                                                 <button className="px-2 py-1 border rounded" onClick={() => increaseQuantity(item.id)}><b>+</b></button>
                                             </div>
                                             <div className="flex items-center mt-2">
-                                                <div className="text-gray-500 font-bold text-sm mr-2">{item.selectedSize || 'Size: Not selected'}</div><br />
-                                                <div className="text-gray-500 font-bold text-sm mr-2">{item.selectedColor || 'Color: Not selected'}</div><br />
+                                                <div className="text-gray-500 uppercase font-bold text-sm mr-2">{item.selectedSize || 'Size: Not selected'}</div><br /> 
+                                                <div className="text-gray-500 uppercase font-bold text-sm mr-2">{item.selectedColor || 'Color: Not selected'}</div><br />
                                             </div>
                                         </div>
                                     </div>

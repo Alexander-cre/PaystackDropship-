@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+.sans{
   background: whitesmoke ;
   max-width : 1440px ;
   height : auto ;
@@ -10,8 +10,11 @@ body{
   margin : 0 auto 0 auto !important ;
   overflow-x : hidden !important ;
 }
-*{
-  overflow-x : hidden !important ;
+.slideInnerImg img{
+  width : 100% ;
+  height : 100% ;
+  object-fit : cover ;
+  object-position : center ;
 }
 
 /* signin and signup pages */
@@ -27,14 +30,23 @@ body{
   width: 100% ;
   background: whitesmoke ;
   overflow-y : hidden !important ;
+  cursor : pointer ;
 } 
 .innerbox img{
   width: 100% !important;
-  height: 65% !important;
+  height: 100% !important;
   object-fit: cover !important;
   object-position: center top !important;
   display : block !important ;
   overflow-y : hidden !important ;
+}
+.innerbox p {
+  position : absolute !important;
+  top : 5% !important;
+  right : 5% !important ;
+  color : white ;
+  border-radius : 5% !important ;
+  padding:3px ; 
 }
 .email{
   background: none !important;
@@ -56,7 +68,6 @@ body{
 .slider{
   height: 500px !important;
   width: 99% ;
-  display: block;
   margin: 0 auto 0 auto ;
 }
 .boxoutercon{
@@ -91,6 +102,7 @@ body{
   display: block ;
   background : whitesmoke ;
   border-radius: 10px ;
+  cursor : pointer ;
 }
 .holitab{
   background : #fff ;
@@ -101,6 +113,7 @@ body{
 .mainholibox{
   height: 230px !important;
   overflow-y:hidden !important ;
+  cursor : pointer ;
   }
 .mainholibox img{
   width: 100% !important ;
@@ -115,6 +128,7 @@ body{
   height: 100% ;
   overflow-y : hidden !important ;
   width: 100% ;
+  cursor : pointer ;
   }
 .miniholibox img{
   width: 100% ;
@@ -181,6 +195,7 @@ body{
 .productImg{
   width: 90% ;
   display: block ;
+  margin : 0 auto 0 auto !important ;
   height: 400px !important ;
 }
 .logoImg{
@@ -233,7 +248,7 @@ input[type=checkbox] {
     display: none;
   } */
    .slider{
-    height: 600px !important;
+    height: 400px !important;
    }
    .conBox{
     width: 80% !important;
@@ -245,6 +260,21 @@ input[type=checkbox] {
     width: 90%;
   }
   .productImg{
+    width : 100% !important ;
+    height : 370px !important;
+    }
+  .productImg .Carousel{
+    height : 300px !important ;
+  }
+  /* .productImg , .productImg img{
     width: 100% ;
+    height : 300px !important ;
+  } */
+  .productImg img{
+    width : 100% !important ;
+    height : 300px !important ;
+    display : inline-block ;
+    object-fit : contain ;
+    object-position : center ;
   }
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import { signOut } from 'next-auth/react';
+
 
 const ProfileSideBar = () => {
     return (
@@ -36,8 +38,11 @@ const ProfileSideBar = () => {
                             </Link>
                         </li>
                         <li
-                            className="mb-4 flex items-center  text-white bg-black px-2 py-2 rounded w-2/4 hover:text-black hover:bg-none hover:border-2 hover:border-black cursor-pointer">
+                            className="mb-4 flex items-center  text-white bg-black px-2 py-2 rounded w-2/4 hover:text-black hover:bg-none hover:border-2 hover:border-black cursor-pointer"
+                            >
+                                <button onClick={() => signOut({ callbackUrl: '/' })}> 
                             <i className="fas fa-money-bill-alt mr-2"></i> Logout
+                            </button>
                         </li>
                     </ul>
                 </nav>

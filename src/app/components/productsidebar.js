@@ -23,6 +23,9 @@ const ProductSideBar = () => {
                         Any Department
                     </li>
                     <li className="cursor-pointer ">
+                        All Products
+                    </li>  
+                    <li className="cursor-pointer ">
                         Men's Wear 
                     </li>  
                     <li className="cursor-pointer ">

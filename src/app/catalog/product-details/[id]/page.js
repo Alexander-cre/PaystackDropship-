@@ -9,6 +9,10 @@ import products from "@/app/data/products";
 import { useEffect, useState } from "react";
 import { useCart } from "@/app/layout";
 import { ToastContainer, toast } from 'react-toastify';
+import "react-responsive-carousel/lib/styles/carousel.min.css" ;
+import { Carousel } from "react-responsive-carousel";
+
+
 
 const productDetails = () => {
 
@@ -18,6 +22,8 @@ const productDetails = () => {
     const { addToCart } = useCart();
     const [selectedSize, setSelectedSize] = useState(null);
     const [selectedColor, setSelectedColor] = useState(null);
+
+
 
     useEffect(() => {
         const foundProduct = products.find((product) => product.id === id);
@@ -30,19 +36,48 @@ const productDetails = () => {
     }, [id]);
 
     if (!product) {
-        return <div>Loading...</div>;
+        return <div className='mx-auto my-auto block text-align'>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 animate-[spin_0.8s_linear_infinite] fill-blue-600 block mx-auto"
+                viewBox="0 0 24 24">
+                <path
+                    d="M12 22c5.421 0 10-4.579 10-10h-2c0 4.337-3.663 8-8 8s-8-3.663-8-8c0-4.336 3.663-8 8-8V2C6.579 2 2 6.58 2 12c0 5.421 4.579 10 10 10z"
+                    data-original="#000000" />
+            </svg>
+        </div>;
     }
+
 
     const handleAddToCart = () => {
         if (typeof window !== 'undefined') { 
-        const itemToAdd = { ...product }; // Create an object with product details
-        addToCart(itemToAdd); // Add the item to the cart
-    
-        // Store the item in local storage using the product ID as the key
-        localStorage.setItem(itemToAdd.id, JSON.stringify(itemToAdd));
-        toast(`${product.name} has been added!`);
+          if (!selectedSize && product.sizes?.length > 0) {
+            toast.error('Please select a size');
+            return;
+          }
+      
+          if (!selectedColor && product.colors?.length > 0) {
+            toast.error('Please select a color');
+            return;
+          }
+      
+          const itemToAdd = { 
+            ...product,
+            selectedSize,
+            selectedColor
+          };
+      
+          addToCart(itemToAdd);
+          
+          // Store with combined key to handle same product with different options
+          const uniqueKey = `${product.id}-${selectedSize}-${selectedColor}`;
+          localStorage.setItem(uniqueKey, JSON.stringify(itemToAdd));
+          
+          toast.success(`${product.name} added to cart!`);
+          
+          // Reset selections
+          setSelectedSize('');
+          setSelectedColor('');
         }
-    };
+      };
 
     const displayItemsInLocalStorage = () => {
         if (typeof window !== 'undefined') { 
@@ -72,16 +107,22 @@ const productDetails = () => {
             <NavBar />
             <section className="flex flex-col lg:flex-row mt-8 p-4">
 
-                <div className="flex flex-col items-center lg:w-1/2">
-                    <div className="w-full productImg ">
-                        <img src="https://placehold.co/600x600" alt="Product Image" className="w-full similarImg" />
-                    </div>
-                    <div className="grid grid-cols-3 gap-6 items-center mt-4 smallImg">
-                        <img src="https://placehold.co/50x50" alt="/" className="w-24 h-24 border border-2" />
-                        <img src="https://placehold.co/50x50" alt="/" className="w-24 h-24 border border-2" />
-                        <img src="https://placehold.co/50x50" alt="/" className="w-24 h-24 border border-2" />
-                    </div>
-                </div>
+                <div className="items-center lg:w-1/2 productImg">
+                <Carousel
+                    autoPlay
+                    infiniteLoop
+                    showThumbs={false}
+                    showArrows={false}
+                    showIndicators={false}
+                    showStatus={false}
+                    className='Carousel'
+                    >
+                        <img src={product.Image} alt="Product Image" className="w-full similarImg" />
+                        <img src={product.Image} alt="Product Image" className="w-full similarImg" />
+                        <img src={product.Image} alt="Product Image" className="w-full similarImg" />
+
+                    </Carousel><br /><br />
+                </div><br />
                 <div className="lg:w-1/2 lg:pl-8 mt-8 lg:mt-0">
                     <h1 className="text-2xl font-bold uppercase"> {product.name}</h1>
                     <div className="flex items-center mt-2">
@@ -92,28 +133,50 @@ const productDetails = () => {
                         <div className="text-red-500 text-sm font-bold">{product.ratings}</div>
                         <div className="text-gray-500 text-sm ml-2">(30 reviews)</div>
                     </div>
+
+
+                    {product.colors?.length > 0 && (
                     <div className="mt-4">
                         <div className="text-sm text-gray-600 font-bold">Color</div>
                         <div className="flex items-center mt-2 space-x-2">
-                            <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
-                            <div className="w-8 h-8 bg-black rounded-full"></div>
-                            <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
-                            <div className="w-8 h-8 bg-red-500 rounded-full"></div>
-                            <div className="w-8 h-8 bg-green-500 rounded-full"></div>
-                            <div className="w-8 h-8 bg-yellow-500 rounded-full"></div>
+                        {product.colors.map((color) => (
+                            <div
+                            key={color}
+                            onClick={() => setSelectedColor(color)}
+                            className={`w-8 h-8 rounded-full cursor-pointer border-2 ${
+                                selectedColor === color
+                                ? 'border-black ring-2 ring-offset-2'
+                                : 'border-transparent hover:border-gray-400'
+                            }`}
+                            style={{ backgroundColor: color }}
+                            />
+                        ))}
                         </div>
                     </div>
+                    )}
+
+
+                    {product.sizes?.length > 0 && (
                     <div className="mt-4">
                         <div className="text-sm text-gray-600 font-bold">Size</div>
                         <div className="flex items-center mt-2 space-x-2">
-                            <button className="px-4 py-2 border rounded">XXS</button>
-                            <button className="px-4 py-2 border rounded">XS</button>
-                            <button className="px-4 py-2 border rounded">S</button>
-                            <button className="px-4 py-2 border rounded">M</button>
-                            <button className="px-4 py-2 border rounded">L</button>
-                            <button className="px-4 py-2 border rounded">XL</button>
+                        {product.sizes.map((size) => (
+                            <button
+                            key={size}
+                            onClick={() => setSelectedSize(size)}
+                            className={`px-4 py-2 border rounded ${
+                                selectedSize === size 
+                                ? 'bg-black text-white' 
+                                : 'hover:bg-gray-100'
+                            }`}
+                            >
+                            {size}
+                            </button>
+                        ))}
                         </div>
                     </div>
+                    )}
+
                     <div className="mt-4">
                         <button
                             className="w-full bg-black text-white py-2 rounded"
