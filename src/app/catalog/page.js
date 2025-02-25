@@ -7,47 +7,13 @@ import ProfileSideBar from "@/app/components/profilesidebar";
 import Link from "next/link";
 import '@/app/catalog/catalog.css';
 import products from "../data/products";
-import { useSearchParams } from 'next/navigation';
-import productService from '@/app/data/products';
-import { useEffect, useState } from 'react';
 import React ,{ Suspense } from "react";
 
 const Catalog = () => {
-
-    const searchParams = useSearchParams();
-    const [filteredProducts, setFilteredProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
-    
-      // Initialize category with proper null check
-  const category = searchParams?.get('category') || null;
-
-
-  useEffect(() => {
-    setLoading(true); // Set loading to true when fetching products
-    try {
-        // Filter products based on the category
-        const filtered = category 
-            ? products.filter(p => p.category.toLowerCase() === category.toLowerCase())
-            : products;
-
-        setFilteredProducts(filtered);
-    } catch (error) {
-            console.error('Error loading products:', error);
-            setProducts([]);
-            } finally {
-            setLoading(false);
-            }
-        }, [category]); // Add category as dependencyy
-    
+        
       if (!products.length) {
         return <div className="p-4">Loading products...</div>;
       }
-
-
-        if (category && products.length === 0) {
-            return <div>No products found in this category</div> ;
-          }
-
     return (
         <div className="bg-gray-100 block ">
 
@@ -73,7 +39,7 @@ const Catalog = () => {
                     <ProductSideBar />
                     <main className="w-full md:w-3/4 md:ml-6 mt-6 md:mt-0">
                         <h1 className="text-3xl font-bold mb-8 capitalize">
-                            {searchParams.get('category') || 'All Products'}
+                            All Products
                         </h1>
                         
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
