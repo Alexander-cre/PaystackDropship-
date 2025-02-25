@@ -68,14 +68,3 @@ const Catalog = () => {
 
     )
 }
-
-export default Catalog;
-
-
-export function SearchBar(){
-    return(
-        <Suspense fallback={ <div > Loading... </div>}>
-            <Catalog />
-        </Suspense>
-    )
-}
