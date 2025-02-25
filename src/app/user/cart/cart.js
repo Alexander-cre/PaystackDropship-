@@ -153,7 +153,7 @@ const Cart = () => {
                                         <button className="text-gray-500"
                                             onClick={() => handleRemoveFromLocalStorage(item.id)}
                                         >
-                                            <img src="https://www.svgrepo.com/show/488148/delete.svg" className='ml-4' alt="Delete" width={20} height={20} />
+                                            <img src="https://www.svgrepo.com/show/488148/delete.svg" className='ml-8' alt="Delete" width={20} height={20} />
                                         </button>
                                     </div>
                                 </div>
