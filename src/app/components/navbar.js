@@ -101,13 +101,7 @@ const NavBar = () => {
                                     <Link href='/catalog' className='text-lg font-medium hover:text-blue-600'>Products</Link>
                                 </li>
                                 <li>
-                                    <Link href='/new' className='text-lg font-medium hover:text-blue-600'>New Arrivals</Link>
-                                </li>
-                                <li>
-                                    <Link href='/brands' className='text-lg font-medium hover:text-blue-600'>Brands</Link>
-                                </li>
-                                <li>
-                                    <Link href='/user/signin' className='text-lg font-medium hover:text-blue-600'>Sign In</Link>
+                                    <Link href='/api/auth/signin' className='text-lg font-medium hover:text-blue-600'>Sign In</Link>
                                 </li>
                             </ul>
                         </div>
