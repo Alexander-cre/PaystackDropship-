@@ -14,6 +14,13 @@
   height: 70% !important;
 }
 
+.prodLogImg{
+  object-fit: contain ;
+  object-position:  center ;
+  width: 200px ;
+  height: 200px ;
+}
+
 @media screen and (max-width : 800px ) {
     
 input[type="checkbox"]:checked ~ #sidebarMenu {

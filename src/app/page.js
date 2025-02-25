@@ -46,7 +46,7 @@ export default function Home() {
           <div className="bg-white p-2 rounded-lg shadow-lg boxoutercon">
             <h2 className="text-xl font-bold mb-2">Shop gifts by recipient</h2>
             <div className="grid grid-cols-2 gap-2 ">
-            <Link href={`/catalog?category=menproducts`}>
+            <Link href={`/catalog`}>
               <div className="innerbox relative mb-4 ">
                 <img src="https://images.pexels.com/photos/6831608/pexels-photo-6831608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="/" className=" mb-6 w-full" />
                 <p className="text-center absolute text-small bg-blend-screen backdrop-blur-xl backdrop-opacity-100">For him</p>

@@ -15,41 +15,8 @@ const ProductSideBar = () => {
                     
             <aside className="w-full md:w-1/4 bg-white p-4 shadow-md" id="sidebarMenu">
 
+                <img src='/JOJO.png' alt='/' className='block w-full h-4/5 sm:w-[150px] prodLogImg' />
 
-
-
-                <ul className="space-y-2">
-                    <li className="font-bold">
-                        Any Department
-                    </li>
-                    <li className="cursor-pointer ">
-                        All Products
-                    </li>  
-                    <li className="cursor-pointer ">
-                        Men's Wear 
-                    </li>  
-                    <li className="cursor-pointer ">
-                        Women's Wear 
-                    </li>  
-                    <li className="cursor-pointer ">
-                        Men Footwears 
-                    </li>  
-                    <li className="cursor-pointer ">
-                        Ladies Footwears 
-                    </li>  
-                    <li className="cursor-pointer ">
-                        Accessories 
-                    </li>   
-                    <li className="cursor-pointer ">
-                        Makeup and Skin care 
-                    </li> 
-                    <li className="cursor-pointer ">
-                        Holiday & Seasonal 
-                    </li> 
-                    <li className="cursor-pointer ">
-                        Deals Combo 
-                    </li> 
-                </ul>
             </aside>
             </>
     )

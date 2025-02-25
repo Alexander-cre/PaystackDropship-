@@ -163,7 +163,8 @@ const Cart = () => {
                             onClick={() => clearLocalStorage()}
                         >
                             clear cart
-                        </button>
+                        </button><br />
+                        <i className='text-sm italic' > Please ensure to clear your cart before adding new items, so as to experience seamless purchase 😊 </i>
                     </div>
                     
                     <div className="w-full lg:w-1/3 mt-4 lg:mt-0 lg:ml-4">

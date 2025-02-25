@@ -10,25 +10,28 @@ import products from "../data/products";
 import { useSearchParams } from 'next/navigation';
 import productService from '@/app/data/products';
 import { useEffect, useState } from 'react';
+import React ,{ Suspense } from "react";
 
 const Catalog = () => {
 
     const searchParams = useSearchParams();
-
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    
       // Initialize category with proper null check
   const category = searchParams?.get('category') || null;
 
 
-        useEffect(() => {
-            if (!productService?.getProductsByCategory) return;
+  useEffect(() => {
+    setLoading(true); // Set loading to true when fetching products
+    try {
+        // Filter products based on the category
+        const filtered = category 
+            ? products.filter(p => p.category.toLowerCase() === category.toLowerCase())
+            : products;
 
-            try {
-            const filteredProducts = category 
-                ? productService.getProductsByCategory(category)
-                : productService.getAllProducts();
-
-            setProducts(filteredProducts);
-            } catch (error) {
+        setFilteredProducts(filtered);
+    } catch (error) {
             console.error('Error loading products:', error);
             setProducts([]);
             } finally {
@@ -42,7 +45,7 @@ const Catalog = () => {
 
 
         if (category && products.length === 0) {
-            return <div>No products found in this category</div>;
+            return <div>No products found in this category</div> ;
           }
 
     return (
@@ -69,7 +72,7 @@ const Catalog = () => {
 
                     <ProductSideBar />
                     <main className="w-full md:w-3/4 md:ml-6 mt-6 md:mt-0">
-                        <h1 className="text-3xl font-bold mb-8">
+                        <h1 className="text-3xl font-bold mb-8 capitalize">
                             {searchParams.get('category') || 'All Products'}
                         </h1>
                         
@@ -101,3 +104,12 @@ const Catalog = () => {
 }
 
 export default Catalog;
+
+
+export function SearchBar(){
+    return(
+        <Suspense fallback={ <div > Loading... </div>}>
+            <Catalog />
+        </Suspense>
+    )
+}
