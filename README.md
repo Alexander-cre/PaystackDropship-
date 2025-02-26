@@ -1,5 +1,4 @@
 
-https://snipboard.io/As2opX.jpg
 
 # 🎉 Jojomarket Place
 
