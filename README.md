@@ -1,3 +1,6 @@
+
+https://snipboard.io/As2opX.jpg
+
 # 🎉 Jojomarket Place
 
 Welcome to **Jojomarket Place**! 🌟 An innovative online Business to Customer (B2C) web application designed to provide a seamless shopping experience. Built with **Next.js** and integrated with **Paystack** payment solutions, Jojomarket Place offers a user-friendly interface that makes online shopping enjoyable and efficient.
