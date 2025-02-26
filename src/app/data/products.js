@@ -38,7 +38,7 @@ const products = [
   {
     "id": 4,
     "name": "Leather Jacket",
-    "price": 12000
+    "price": 12000,
     "original_price": 1999,
     "quantity": 1,
     "ratings": 4.6,
